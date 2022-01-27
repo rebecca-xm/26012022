@@ -22,3 +22,9 @@ code {
 .square.move {
   margin-left: 300px;
 }
+
+.square2 {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
