@@ -25,7 +25,7 @@ const ComputedStyles = () => {
             {/* le prime graffe sono per il valore, le seconde perché sto passando
             come oggetto le proprietà css da applicare in linea in React
             CSS => margin-left (kebab case)
-            JS => MmarginLeft (camel case) */}
+            JS => MarginLeft (camel case) */}
         </section>
     );
 };
