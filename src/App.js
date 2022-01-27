@@ -1,9 +1,10 @@
 import './App.css';
+import ComputedStyles from './components/ComputedStyles';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <ComputedStyles />
     </div>
   );
 }
