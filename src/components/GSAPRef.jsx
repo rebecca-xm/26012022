@@ -20,7 +20,7 @@ const GSAPRef = () => {
             x: 300,
             onComplete: () => anim.reverse(),
         });
-    }, [setDuration]);
+    }, [duration]);
 
     const slider = (event) => setDuration(parseInt(event.target.value));
 
