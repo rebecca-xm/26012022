@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <style>
+        .square {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Impariamo GSAP</h1>
+
+    <button class='btn'>Move!</button>
+    <div class='square'></div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const square = document.querySelector('.square');
+            const btn = document.querySelector('.btn');
+
+            btn.addEventListener('click', () => {
+                const random = Math.floor(Math.random() * 500);
+
+                // Lista di animazioni
+                // const list = [
+                //     gsap.to(square, {duration: 1, x: random}),toPause(),
+                //     gsap.to(square, {duration: 2, y: random}),toPause(),
+                //     gsap.to(square, {duration: 1, rotate: 180}),toPause(),
+                //     gsap.to(square, {duration: 1, scale: 2}),toPause()
+                // ];
+
+                // indice array casuale
+                // const r = Math.floor(Math.random() * list.length);
+                // list[r].resume();
+
+                const animation = gsap.to(square, {
+                    duration: 2,
+                    x: random,
+                    y: random,
+                    onComplete: () => {
+                        animation.reverse();
+                    },
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
